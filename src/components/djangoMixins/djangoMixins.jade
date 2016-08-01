@@ -1,0 +1,35 @@
+//- use
+//- 
+//- include ../../components/jadeMixins/jadeMixins
+//- 
+//- +if('a', 100)
+//- 
+//- +unless('a', 100)
+//-   
+
+mixin if(name, value) 
+  != '{% if ' + name + ' == ' + value + ' %}'
+  block
+  | {% endif %}
+  
+mixin unless(name, value)
+  != '{% if ' + name + ' != ' + value + ' %}'
+  block
+  | {% endif %}
+  
+mixin for(items, item)
+  != '{% for ' + item + ' in ' + items + ' %}'
+  block
+  | {% endfor %}
+  
+mixin with(leftValue, rightValue)
+  != "{% with " + leftValue + "=" + rightValue + " %} "
+  block
+  | {% endwith %}
+
+mixin masterList(cls, ...items)
+  ul(class=cls)
+    each item in items
+      li.card
+        a(href="javascript:;")
+          img(src=require('./images/master'+ item +'.png'))

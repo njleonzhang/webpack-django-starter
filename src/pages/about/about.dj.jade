@@ -1,0 +1,25 @@
+extends ../../components/base/base
+
+block vars
+  - var title = "关于"
+
+block content
+  p "关于"
+  
+  div.check
+    a(href='home.html') 去首页
+
+  p {{ author }}
+  p {{ email }}
+  
+  include ../../components/djangoMixins/djangoMixins.jade
+  
+  p we are rendered by fake django:
+  
+  p 
+    + if('djangoNumber', '100')
+      span djangoNumber==100
+
+  + for('list', 'elem')
+    p {{ elem.name }}
+    

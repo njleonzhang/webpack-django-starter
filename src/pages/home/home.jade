@@ -1,0 +1,10 @@
+extends ../../components/base/base
+
+block vars
+  - var title = "首页"
+
+block content
+  p "首页"
+  .qrcode-wrap
+    img(src="#{require('../../assets/qrcode.jpg')}")
+  a(href='about.dj.html') 去关于页面
