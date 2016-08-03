@@ -12,6 +12,12 @@ var entries = {}
 // entry文件的名字不能重复
 entryFiles.forEach(function(file) {
   var fileName = path.parse(file).name
+
+  // 如果文件名是base.js, 则不处理这个文件
+  if(fileName == 'base') {
+    return;
+  }
+
   if(fileName in entryFiles) {
     console.error("entry文件名重复", fileName)
   }

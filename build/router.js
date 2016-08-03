@@ -32,6 +32,11 @@ var initRouter = function(devMiddleware) {
   swigTemplates.forEach(function(template) {
     var fileName = path.parse(template).name
 
+    // 如果文件名是base.jade, 则不处理这个文件
+    if(fileName == 'base') {
+      return;
+    }
+
     writeToIndex(`<p><a href='/${fileName}'> ${fileName}</a></p>`)
 
     router.get('/' + fileName, function(req, res, next) {

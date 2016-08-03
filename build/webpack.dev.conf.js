@@ -35,6 +35,10 @@ var webpackConfig = merge(baseWebpackConfig, {
 var pugTemplates = glob.sync("./src/pages/**/*.jade")
 pugTemplates.forEach(function(template) {
   var fileName = path.parse(template).name
+  // 如果文件名是base.jade, 则不处理这个文件
+  if(fileName == 'base') {
+    return;
+  }
   var html = {
     filename: fileName + ".html",
     template: template,
@@ -45,7 +49,7 @@ pugTemplates.forEach(function(template) {
   if(/.+\.dj$/.test(fileName)){
     html.chunks = ['commons', fileName.slice(0, [].lastIndexOf.call(fileName, '.'))]
   }
-  
+
   // https://github.com/ampedandwired/html-webpack-plugin
   webpackConfig.plugins.push(new HtmlWebpackPlugin(html))
 })
