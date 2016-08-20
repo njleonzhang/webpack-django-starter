@@ -1,0 +1,44 @@
+.section-banner {
+  height: 278px;
+  .banner {
+    height: 278px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.company-detail {
+  margin-left: 255px;
+  h3 {
+    padding: 40px 0;
+    font-size: 30px;
+    color: $mainFont;
+  }
+  .bottom {
+    font-size: 18px;
+    color: $mainFont;
+    .word {
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: 500;
+    }
+  }
+  img {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .company-content {
+    margin-bottom: 20px;
+    p.indent {
+      font-size: 16px;
+      line-height: 28px;
+      color: $mainFont;
+      text-indent: 2em;
+    }
+  }
+}

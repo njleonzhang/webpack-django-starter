@@ -2,6 +2,9 @@
 var path = require('path')
 
 module.exports = {
+  common: {
+    sassResources: "./src/common-style/variables.scss"
+  },
   build: {
     env: require('./prod.env'),
     assetsRoot: path.resolve(__dirname, '../dist'),

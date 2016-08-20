@@ -37,7 +37,8 @@ var webpackConfig = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'components': path.resolve(__dirname, '../src/components'),
-      'pages': '../src/pages'
+      'pages': '../src/pages',
+      'common-style': '../src/common-style'
     }
   },
   resolveLoader: {
@@ -65,7 +66,7 @@ var webpackConfig = {
       // 将sass抽成文件
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("css!postcss!sass")
+        loader: ExtractTextPlugin.extract("css!postcss!sass!sass-resources")
       },
       {
         test: /\.jade$/,
@@ -89,6 +90,10 @@ var webpackConfig = {
       }
     ]
   },
+  postcss: function () {
+        return [require('autoprefixer')];
+  },
+  sassResources: config.common.sassResources,
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -98,7 +103,7 @@ var webpackConfig = {
   ],
   eslint: {
     formatter: require('eslint-friendly-formatter')
-  },
+  }
 }
 // enhanced-require.config.js
 module.exports = webpackConfig

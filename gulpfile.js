@@ -13,14 +13,11 @@ gulp.task('cleanTemplate', function () {
     .pipe(del({force: true}));
 });
 
-gulp.task('copyAssets', function () {
+gulp.task('clean', ['cleanStatic', 'cleanTemplate']);
+
+gulp.task('copyStatic', function () {
   return gulp.src(['./dist/static/**/*', '!./dist/static/**/*.map'])
     .pipe(gulp.dest('../bsyweb/static/web/static'));
-});
-
-gulp.task('copyHtml', function () {
-  return gulp.src(['./dist/*.html'])
-    .pipe(gulp.dest('../bsyweb/static/web/'));
 });
 
 gulp.task('copyDjangoTemplate', function () {
@@ -29,5 +26,5 @@ gulp.task('copyDjangoTemplate', function () {
 });
 
 gulp.task('default', ['cleanStatic', 'cleanTemplate'],function () {
-  gulp.start(['copyAssets', 'copyHtml', 'copyDjangoTemplate']);
+  gulp.start(['copyStatic', 'copyDjangoTemplate']);
 });

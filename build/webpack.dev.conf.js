@@ -26,7 +26,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: "commons",
-      filename: utils.assetsPath('js/[name].js')
+      filename: utils.assetsPath('js/[name].js'),
+      minChunks: 2
     }),
     new ExtractTextPlugin(utils.assetsPath('css/[name].css')),
   ]
