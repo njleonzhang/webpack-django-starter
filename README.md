@@ -1,6 +1,7 @@
 # 前端工程化的探索
 不通过node层实现非SPA网页开发的前后端分离。
 技术栈：webpack + jade + es6 + scss + swig等
+项目git: [webpack-django-starter](https://github.com/njleonzhang/webpack-django-starter)
 
 ## 需求
 * 项目需求公司官网。
@@ -17,6 +18,7 @@
 <center>
 <img src="/assets/django_code_strcuture.png" width="300px">
 </center>
+
 缺点：
 * 想测试？你需要一套后台环境
 * 想livereload？要单独起个livereload进程监控前端代码的目录，还要在页面里特别的嵌入一段代码。[livereload](https://www.npmjs.com/package/livereload)
@@ -100,4 +102,3 @@ page目录下的jade文件分为两种：一种是dj.jade文件，一种是.jade
 
 ## 结束语
 东西比较多，写的也很乱，感觉很难让大家看明白。。。哈哈。看code吧。本项目是我们team的一次尝试，我们用这个架构写了2个项目，感觉还不错，不需要引入node层，前后端彻底分离了，在我们这样的特定项目背景下，比较适用，和大家分享下，希望有用。
-[webpack-django-starter](https://github.com/njleonzhang/webpack-django-starter)
