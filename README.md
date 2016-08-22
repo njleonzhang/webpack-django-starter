@@ -1,6 +1,8 @@
 # 前端工程化的探索
-不通过node层实现非SPA网页开发的前后端分离。
-技术栈：webpack + jade + es6 + scss + swig等
+不通过node层实现非SPA网页开发的前后端分离。 
+
+技术栈：webpack + jade + es6 + scss + swig等 
+
 项目git: [webpack-django-starter](https://github.com/njleonzhang/webpack-django-starter)
 
 ## 需求
