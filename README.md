@@ -1,7 +1,27 @@
-# 前端工程化的探索
-不通过node层实现非SPA网页开发的前后端分离。 
+# 项目使用
 
-技术栈：webpack + jade + es6 + scss + swig等 
+* clone 工程
+```
+git clone https://github.com/njleonzhang/webpack-django-starter
+```
+* 安装npm依赖
+```
+cd webpack-django-starter && npm install
+```
+* 启动开发node server打开测试页面
+```
+npm run dev
+浏览器访问 http://0.0.0.0:8082
+```
+* build release版本
+```
+npm run build
+```
+
+# 前端工程化的探索
+不通过node层实现非SPA网页开发的前后端分离。
+
+技术栈：webpack + jade + es6 + scss + swig等
 
 项目git: [webpack-django-starter](https://github.com/njleonzhang/webpack-django-starter)
 
@@ -102,5 +122,5 @@ page目录下的jade文件分为两种：一种是dj.jade文件，一种是.jade
 
 另外，有时候一些页面是一组页面，他们很大一部分是一样的，比如图4中的about-us下面有2个页面author和company。此时，可以在about-us下面写一个base，把公共的内容写在base里。而base会被识别，在dev和release时都不会被当做页面处理。（不会生成一个base的页面）
 
-## 结束语
+## 写在最后
 东西比较多，写的也很乱，感觉很难让大家看明白。。。哈哈。看code吧。本项目是我们team的一次尝试，我们用这个架构写了2个项目，感觉还不错，不需要引入node层，前后端彻底分离了，在我们这样的特定项目背景下，比较适用，和大家分享下，希望有用。
