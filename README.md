@@ -90,7 +90,7 @@ js、css和html都可以使用预编译器
 
 所以，最终的结构就是这样：
 <center>
-![architecture2](/assets/architecture2.png)
+<img src="/assets/architecture2.png" width="800px">
 图2
 </center>
 
