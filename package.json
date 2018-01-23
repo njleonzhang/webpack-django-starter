@@ -51,7 +51,7 @@
     "webpack-merge": "^0.8.3"
   },
   "dependencies": {
-    "jquery": "1.12",
+    "jquery": "1.12.4",
     "normalize.css": "^4.2.0"
   }
 }
