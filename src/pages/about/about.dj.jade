@@ -5,21 +5,20 @@ block vars
 
 block content
   p "关于"
-  
+
   div.check
     a(href='home.html') 去首页
 
+  include ../../components/djangoMixins/djangoMixins.jade
+
+  p we are rendered by fake django:
+
   p {{ author }}
   p {{ email }}
-  
-  include ../../components/djangoMixins/djangoMixins.jade
-  
-  p we are rendered by fake django:
-  
-  p 
+
+  p
     + if('djangoNumber', '100')
       span djangoNumber==100
 
   + for('list', 'elem')
     p {{ elem.name }}
-    
