@@ -38,7 +38,10 @@ var webpackConfig = {
       'src': path.resolve(__dirname, '../src'),
       'components': path.resolve(__dirname, '../src/components'),
       'pages': '../src/pages',
-      'common-style': '../src/common-style'
+      'common-style': '../src/common-style',
+      // jquery can be included multi-times without the following configuration,
+      // check issue https://github.com/heiseonline/shariff/issues/222 for more details.
+      'jquery': path.join(__dirname, '../node_modules/jquery/')
     }
   },
   resolveLoader: {
